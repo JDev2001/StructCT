@@ -1,0 +1,42 @@
+{
+  "architecture": "crossgat",
+  "classes": [
+    "excluded",
+    "eligible"
+  ],
+  "config": {
+    "ATTN_DROPOUT": 0.1,
+    "CROSS_ATTN_HEADS": 4,
+    "DESC_EMBED_DIM": 768,
+    "DESC_FEATURE_DIM": 256,
+    "DROPOUT": 0.2,
+    "EDGE_TYPE_EMBED_DIM": 32,
+    "EMBEDDING_NOISE_STD": 0.06,
+    "EMBED_DIM": 772,
+    "HEADS": 4,
+    "H_DIM": 256,
+    "MLP_HIDDEN_DIM": 256,
+    "NODE_ROLE_EMBED_DIM": 16,
+    "NODE_TEXT_MASK_PROB": 0.15,
+    "NODE_TYPE_EMBED_DIM": 64,
+    "NUM_CLASSES": 2,
+    "NUM_EDGE_TYPES": 17,
+    "NUM_LAYERS": 3,
+    "NUM_NODE_ROLES": 3,
+    "NUM_NODE_TYPES": 19,
+    "READOUT_HEADS": 4,
+    "SYMBOLIC_MATCH_THRESHOLD": 0.8,
+    "SYMBOLIC_PROJ_DIM": 64,
+    "SYMBOLIC_STATUS_DIM": 4,
+    "TEXT_FEATURE_DROPOUT": 0.15,
+    "TEXT_FEATURE_SCALE": 1.0,
+    "TEXT_PROJ_DIM": 256,
+    "USE_ATTN_POOLING": false,
+    "USE_CROSS_ATTN_HEAD": false,
+    "USE_DENSE_CROSS_ANY": true,
+    "USE_SAME_ANY": false
+  },
+  "format": "pytorch-state-dict",
+  "sha256": "5919d1ccd6024ea849f85b958f4dee1269e1c1b506fe6754c23ca147eae4f025",
+  "source_checkpoint": "checkpoint.ckpt"
+}

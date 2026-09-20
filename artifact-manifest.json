@@ -1,0 +1,568 @@
+{
+  "format_version": 1,
+  "artifact": "StructCT",
+  "inventory": {
+    "models": [
+      {
+        "alias": "full",
+        "classes": 3,
+        "checkpoints": 1
+      },
+      {
+        "alias": "cv",
+        "classes": 3,
+        "checkpoints": 5
+      },
+      {
+        "alias": "3class-ce",
+        "classes": 3,
+        "checkpoints": 5
+      },
+      {
+        "alias": "2class-base",
+        "classes": 2,
+        "checkpoints": 5
+      },
+      {
+        "alias": "2class-eligloss",
+        "classes": 2,
+        "checkpoints": 5
+      },
+      {
+        "alias": "2class-rank",
+        "classes": 2,
+        "checkpoints": 5
+      }
+    ],
+    "datasets": [
+      {
+        "name": "patient-graphs",
+        "rows": 165
+      },
+      {
+        "name": "trial-graphs",
+        "rows": 103878
+      },
+      {
+        "name": "reranking",
+        "rows": 13229
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 48,
+      "sha256": "1ee2ca53829517b62b26487d1316ad769fd97675b2b426b993a6815d88484c6c"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 118,
+      "sha256": "8ca09975f451bf09d6584b126e2e811e1dba8a356f9619e6d9407f6d9a3074c5"
+    },
+    {
+      "path": ".python-version",
+      "bytes": 5,
+      "sha256": "49a506dd32096b010d75205acf3430c9ae6c40351888129499e5a5e487126c93"
+    },
+    {
+      "path": "data/patient-graphs/data/2021-00000-of-00001.parquet",
+      "bytes": 63631,
+      "sha256": "c4da0d39e430105acee59ae22fb5fcaafe1a27e3d484b46b93a52949b97888f1"
+    },
+    {
+      "path": "data/patient-graphs/data/2022-00000-of-00001.parquet",
+      "bytes": 24041,
+      "sha256": "4e9c448ec42ab182fff33204e9fb4a0e4c4bbd8e203eb012163b07b350a06355"
+    },
+    {
+      "path": "data/patient-graphs/data/2023-00000-of-00001.parquet",
+      "bytes": 20398,
+      "sha256": "fa95dadfedcbe111e5cb14aba6722ace65785c00a0a45f2659b450fbfb2fc9a2"
+    },
+    {
+      "path": "data/patient-graphs/README.md",
+      "bytes": 897,
+      "sha256": "9ced9d5ae35b6117a53eb3b771e566ebd36a6ad9c9b1cf2e261f3ba2e4b72122"
+    },
+    {
+      "path": "data/README.md",
+      "bytes": 970,
+      "sha256": "b02c5e6c6a2ff9a55fe707597d863bf877e17f6766251dae34cf9e8a37a79210"
+    },
+    {
+      "path": "data/reranking/data/graphs.parquet",
+      "bytes": 18520145,
+      "sha256": "80eade6c562754f9a792b66de3c16266697cb63041d3ae5301fb1ec7eec654f4"
+    },
+    {
+      "path": "data/reranking/README.md",
+      "bytes": 3312,
+      "sha256": "9562a2a18491de56e2e5a11cbdb426f271e215fe8c8c26a44552b6896664a1cf"
+    },
+    {
+      "path": "data/trial-graphs/data/train-00000-of-00002.parquet",
+      "bytes": 57974452,
+      "sha256": "ef66c477231bf4825e9c39af177fe18f0de56d764a88cbe58f3f329e12258bc5"
+    },
+    {
+      "path": "data/trial-graphs/data/train-00001-of-00002.parquet",
+      "bytes": 52341231,
+      "sha256": "384108e60f9f57eea40f807e71431d7f4f94a399c21e99050a9679a253f1ca4d"
+    },
+    {
+      "path": "data/trial-graphs/README.md",
+      "bytes": 836,
+      "sha256": "5ec9740ae7ed86b9ac1ffbb08f485539c893632c26c0c97f2106a822e35b5bc0"
+    },
+    {
+      "path": "docs/datasets/patient-graphs.md",
+      "bytes": 706,
+      "sha256": "d969ca09081d2212f5c2383847343131d4ff3035258e2623be326c4941caf1ba"
+    },
+    {
+      "path": "docs/datasets/reranking-graphs.md",
+      "bytes": 649,
+      "sha256": "6c8704c2456214acbd1e0c38ea42624fae3e11e67a4044236722e54025fd34a9"
+    },
+    {
+      "path": "docs/datasets/trial-graphs.md",
+      "bytes": 753,
+      "sha256": "8f735689711887f827942223d3f91a32b0617b5f9e6fcf258189ffb2ec12996b"
+    },
+    {
+      "path": "docs/reproducibility.md",
+      "bytes": 1711,
+      "sha256": "09b36d870bd1f8eb87da2a967a72e8af6e87a8fd4c5385f5cba2bb39a20f8ea6"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 845,
+      "sha256": "d52fecc8885f5f5c7e0cd2bf5b5b0724b799f702280c06f204927ef1a985efa7"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-base/checkpoints/fold0/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "0efbf4ca9e4b22052f97d987781253fcfbb9c7bceae110bb5f38101b940ba554"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-base/checkpoints/fold0/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "dbeb958584f6fca847fd26287cb955052bdd12dca9fec4d94ff4defdc1528180"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-base/checkpoints/fold1/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "a5f78214d262ef336c096b2d222c442dc5fa6eed867b2802dc8170200262e0ab"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-base/checkpoints/fold1/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "5ed907528c45d42104d4c0304dc1538f80ef96a82660f07149ef8677567509e1"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-base/checkpoints/fold2/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "f6a678f7c26bd22f1b36178f827c1735d390e1687b6c6f58ee927bb07d152e54"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-base/checkpoints/fold2/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "734340dd883d92c07497cc46fc5b0ac7a2337f4aa24f2553f82132830db1e99f"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-base/checkpoints/fold3/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "b376a7ef172facae5d8a28de3efb2b21d8afa3fa37d33aa49514e88a21319133"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-base/checkpoints/fold3/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "3dd2118942c3e4f77351e3cfaf8c90e614bae34414ee5985ad5a1e1862f6106c"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-base/checkpoints/fold4/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "bdf6664d6e0ca86dce9a68ce51ff9af40c98890d0ab601bc6e3393fb3465f931"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-base/checkpoints/fold4/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "6fbacec95b93886f5e3ada93dfd8c62873fb8cb32c11a5c53eddf60c4cfe5744"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-base/README.md",
+      "bytes": 3236,
+      "sha256": "525d66f17498b105f4adcf8ac8a1abe950d73472b8577c89008b83a2009ceabe"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-eligloss/checkpoints/fold0/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "3d9d570c2c689e4eda1bbd77936434861707273b34b094de6a55e9814cc0aefd"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-eligloss/checkpoints/fold0/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "43d45f867a82a3661179234842ac7cb8f36eb7831ee06d69226d65cee0b81fe5"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-eligloss/checkpoints/fold1/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "9d570196a219f7da493d8472bddf4a6af38e780c9e787ed862538ab144cb30eb"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-eligloss/checkpoints/fold1/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "5919d1ccd6024ea849f85b958f4dee1269e1c1b506fe6754c23ca147eae4f025"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-eligloss/checkpoints/fold2/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "fbda60be63263a56628781ba7e823e2f81db641aa71fdb9ca3c26444419475bd"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-eligloss/checkpoints/fold2/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "c254974785571ee47a263268f65f48f9163f99d161214f45eff9ccb4436c6aa0"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-eligloss/checkpoints/fold3/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "dec274b2ee846b2e310d9f8fb1d248ff84b69d88603626a798699f23ad523491"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-eligloss/checkpoints/fold3/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "a050041149a1c0929693c821d81d7de88ddd449ed75a000d76454749ce272b0b"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-eligloss/checkpoints/fold4/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "9f47cbdf0f2d17da006d8c2c24468a7e5f633f1d41b75ae1e216b0fe18b9f396"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-eligloss/checkpoints/fold4/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "0f52d441d080fa2515993ad9b5132affb07a30965aea6c49618d4d0257caad15"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-eligloss/README.md",
+      "bytes": 3184,
+      "sha256": "2ebbaecb59db4e85283d5dab8eb31b2fa156d8d829044fa9bc263ef0b94ea010"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-rank/checkpoints/fold0/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "90ce50039cecaf80ebb582ea8ad54cdf04392cb9d09e2eedb8892e748f667184"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-rank/checkpoints/fold0/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "849b47ce57063a82051b038af83d3dd339f67b35c1a3181312e6529131a3e866"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-rank/checkpoints/fold1/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "fd7d340094544df94c15f469c6def91649ec884ea1ddc858c39456277e3edb33"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-rank/checkpoints/fold1/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "ccedfcbfd25b133d3bc854850ad334c4877f1348de7dfee2780b559592c38ddf"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-rank/checkpoints/fold2/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "55d7a26263657891f6aee66552af221e4eec11abb040184f9f7233d64bb4bf18"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-rank/checkpoints/fold2/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "3287433394164fedb3f5cc1ea00b8c41c87745c719498a03ab95f14628a09b71"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-rank/checkpoints/fold3/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "40fa995bcc09b006ff2e9f40e69fbe867a6eed4211e84645582b67a79f933a41"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-rank/checkpoints/fold3/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "b06b21e826fb9f8ba362dda92a2ba889b9a76ff7bc19de24fa2d2147b3f67342"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-rank/checkpoints/fold4/checkpoint.json",
+      "bytes": 1084,
+      "sha256": "a3b9a7267b9c4e6255f18dcdf38b8768b8e6bce20966c54286514e784d453f81"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-rank/checkpoints/fold4/checkpoint.pt",
+      "bytes": 6888914,
+      "sha256": "bd1554daeda21b257abc00b1b38f041235ac1fb2db4847e3078b7b9ac07c5db5"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-2class-rank/README.md",
+      "bytes": 3212,
+      "sha256": "f456d51b8dd948b1bcda154bf1f3f223ef421c2f9a4e1765ac33f76ec25242f5"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-3class-ce/checkpoints/fold0/checkpoint.json",
+      "bytes": 1099,
+      "sha256": "17a91c65c928a59fd7ea3f9fb130a3c6ca316e80a28f21e5a9d89efd76de9ab1"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-3class-ce/checkpoints/fold0/checkpoint.pt",
+      "bytes": 9539714,
+      "sha256": "e0ad3bb44d916eb6c3826cda78b5bb10c8639d0ad19097089559e8f1691448ce"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-3class-ce/checkpoints/fold1/checkpoint.json",
+      "bytes": 1099,
+      "sha256": "62558651a36a8c8c13a0df4d31e1cabe7dda41e480096c429f6727b125a52da3"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-3class-ce/checkpoints/fold1/checkpoint.pt",
+      "bytes": 9539714,
+      "sha256": "2dd1b1ce84c0708f710873a4392d496abfe0b4525aaee876ea92dc4bda34c3d5"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-3class-ce/checkpoints/fold2/checkpoint.json",
+      "bytes": 1099,
+      "sha256": "728106a648ca4c3fbb602ef6d1cba5f224e137cde4b0574abc27f4287203d18f"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-3class-ce/checkpoints/fold2/checkpoint.pt",
+      "bytes": 9539714,
+      "sha256": "681e2878114fae073af057ee8847c53b49872722d30ae60c974528a870f45f72"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-3class-ce/checkpoints/fold3/checkpoint.json",
+      "bytes": 1099,
+      "sha256": "bf1b919de1578d37bc6b06900b4387727e7e08900566ebe5d9663773e71a3395"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-3class-ce/checkpoints/fold3/checkpoint.pt",
+      "bytes": 9539714,
+      "sha256": "cba1ece3d0573329834f332d32d0e1bde8b398970887519a86d4c2b96d384c71"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-3class-ce/checkpoints/fold4/checkpoint.json",
+      "bytes": 1099,
+      "sha256": "16a1e39cd5a61d6e6ce6a2e2bb78b3d823ea7af2890b8999183fb649a876945b"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-3class-ce/checkpoints/fold4/checkpoint.pt",
+      "bytes": 9539714,
+      "sha256": "da2baf714344d3a06b5997788ec842553d397b8e65bcbb9d34bb4d019007fae7"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-3class-ce/README.md",
+      "bytes": 3411,
+      "sha256": "5dd8c0019845d6bea2be72d28dd7210e80996c7e699b3a1f4e83dad0d4eebb17"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-cv/checkpoints/fold0/checkpoint.json",
+      "bytes": 1099,
+      "sha256": "2ed1d601736d11119fbc3c4a99f0438d6a694f3707a45df3d0be0a1d3b1a99e9"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-cv/checkpoints/fold0/checkpoint.pt",
+      "bytes": 9539714,
+      "sha256": "312719abf67e2c9a1bd5082494b852825f78119467e280d916747262fdaf6582"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-cv/checkpoints/fold1/checkpoint.json",
+      "bytes": 1099,
+      "sha256": "a703b1408f64170029f93189c47a79ab4d5170750ef1fdae049a5736d21335b8"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-cv/checkpoints/fold1/checkpoint.pt",
+      "bytes": 9539714,
+      "sha256": "18111517780d169ffbb10c2f8b12948933a91cd170bc2f86549b6f5217a823f3"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-cv/checkpoints/fold2/checkpoint.json",
+      "bytes": 1099,
+      "sha256": "3f2a8dc1356b7d48202a5932703ff9ea96d6c8e53f83b4d441f50d6600243a78"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-cv/checkpoints/fold2/checkpoint.pt",
+      "bytes": 9539714,
+      "sha256": "ea66fc12e12923f78200758c139bac84cbdafce5c0834ae707c4f0e7dc10a2ff"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-cv/checkpoints/fold3/checkpoint.json",
+      "bytes": 1099,
+      "sha256": "fe9842ba7c45ec3fad47a380008d35814b9b60b863e489c2e2ee74128c8abd6b"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-cv/checkpoints/fold3/checkpoint.pt",
+      "bytes": 9539714,
+      "sha256": "7f6f033ed44a6b9f7c8724887a592debe5a9dad087b1d8ffb8007a590ee6d46d"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-cv/checkpoints/fold4/checkpoint.json",
+      "bytes": 1099,
+      "sha256": "407025e3364644bdc7514d6033d4e40f7be49103ab51a71ccd8eaeb064da9069"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-cv/checkpoints/fold4/checkpoint.pt",
+      "bytes": 9539714,
+      "sha256": "09091cd69dce315b256ec5b94aed2148762ad217c80348e5f3e0d355cd293c18"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-cv/README.md",
+      "bytes": 6280,
+      "sha256": "232715855e28f383fca5b0845e0058ef69976cd59dbfa38442089cdfdf974ac7"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-full/checkpoints/model.json",
+      "bytes": 1094,
+      "sha256": "761d04a74a27c9ca65b49d42207c9da428e4116430d5b07ddf317bcdb7a14d1a"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-full/checkpoints/model.pt",
+      "bytes": 9539966,
+      "sha256": "6d38d6edf6011825d89b9055d5ff14b2908b20224594a9076ab6d9a71e76a601"
+    },
+    {
+      "path": "models/crossgat-trial-eligibility-full/README.md",
+      "bytes": 4765,
+      "sha256": "0d0f9a19a636a886992e02cb4185846e058b2663156e951852697a22f6ac043e"
+    },
+    {
+      "path": "models/README.md",
+      "bytes": 998,
+      "sha256": "f53f521bf36fadc1ca01a3d065df078ae5c0c6394b6aae05e535d97125ed5c3b"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1023,
+      "sha256": "b238c880b1700961e41bac4c50a709d77b018b808c827f20063f135cb470139e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5375,
+      "sha256": "deca2711b786cb8e2956e09a7f197b37cf0b67a33423176a44bf18c1ebaadf06"
+    },
+    {
+      "path": "scripts/build_manifest.py",
+      "bytes": 2328,
+      "sha256": "af8fd389e977d9dde6bc35f927c1649ae3b9d471653aac47f311c1ce7cdb29db"
+    },
+    {
+      "path": "src/structct/__init__.py",
+      "bytes": 208,
+      "sha256": "ae729080ac4c314974ec97e8888e7b23cc3eebdcd04a285c50e83a3ed6f729f5"
+    },
+    {
+      "path": "src/structct/cli.py",
+      "bytes": 2787,
+      "sha256": "f92ddb09fe638f0216f0b913745dc31308e9ea8eed7b02647c8f7c59d2ce8a63"
+    },
+    {
+      "path": "src/structct/config.py",
+      "bytes": 1452,
+      "sha256": "bf8402eb5f4a0f6015b316502efa21c35de69ea4423ed371e555eb5a00483ca7"
+    },
+    {
+      "path": "src/structct/data/__init__.py",
+      "bytes": 339,
+      "sha256": "fdd1a84941cc8d7ef87974b19aff1eb09e0691b7daf90f258875085b199db751"
+    },
+    {
+      "path": "src/structct/data/embeddings.py",
+      "bytes": 5091,
+      "sha256": "6c66726b5446eb01728bac465e7a142a5b1836b974f5a80aba2d0d9f92059408"
+    },
+    {
+      "path": "src/structct/data/local.py",
+      "bytes": 3266,
+      "sha256": "62698cf699dc12af0402f5a001baaf3048c2084aac850d2f06c810d5a593ade9"
+    },
+    {
+      "path": "src/structct/data/preprocessing.py",
+      "bytes": 12446,
+      "sha256": "2a8f5078016615d478bef2890edfefe945eeabbeda7c70d9e930ecb8e01fa02b"
+    },
+    {
+      "path": "src/structct/data/schemas.py",
+      "bytes": 1312,
+      "sha256": "eb5b5b0249057ee73faee1c7acb45e3c0157cf3a1e38288e1d82f411e7f6fcad"
+    },
+    {
+      "path": "src/structct/data/symbolic.py",
+      "bytes": 2774,
+      "sha256": "c90e8b2fc99ac0abdc0fcde48ba5c61653b5a8777a368c690e723cd3fc53049d"
+    },
+    {
+      "path": "src/structct/inference/__init__.py",
+      "bytes": 125,
+      "sha256": "6c5363bddd967479574aea70d47cd5532030c509f484df483449ec373aaeffcb"
+    },
+    {
+      "path": "src/structct/inference/loader.py",
+      "bytes": 2708,
+      "sha256": "07ea6aa09389fd9872787d68beba389dfd5260dae49728eb3154a36a04105c82"
+    },
+    {
+      "path": "src/structct/inference/pipeline.py",
+      "bytes": 4037,
+      "sha256": "6dde2f27e91d7563086b2878a4b35dbf4a9e35633934aa952eba8b4e1523d089"
+    },
+    {
+      "path": "src/structct/model/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/structct/model/crossgat_match.py",
+      "bytes": 11179,
+      "sha256": "e671af6f0e0900d2bcd99b2db37747a8a411e71e487fbcd6e5a2eb2dacb1d70e"
+    },
+    {
+      "path": "src/structct/model/joint_model.py",
+      "bytes": 2103,
+      "sha256": "6390805219d72e8f7a38d3d210d149010c5aed9a9a1be80ca3353e1c466d3e68"
+    },
+    {
+      "path": "src/structct/model/layers.py",
+      "bytes": 1717,
+      "sha256": "0e23b3437ae0e861384a5298eee27d21188ddaa79ed3b3630e126cd2deeb6070"
+    },
+    {
+      "path": "src/structct/model/match.py",
+      "bytes": 4006,
+      "sha256": "08e34388c15e56852c2bb8ef4c464ab77a749abccde9eef8533941d48c5bacb2"
+    },
+    {
+      "path": "src/structct/model/pooling.py",
+      "bytes": 1968,
+      "sha256": "091311b25afffa1812434811f48a48a021c8d86b813090c5365fb62c42319f4c"
+    },
+    {
+      "path": "src/structct/paths.py",
+      "bytes": 489,
+      "sha256": "a5eb6dfd91af626a1f0ede46d06f6a068f8098fe89a16eba96aa03b9f69137c7"
+    },
+    {
+      "path": "tests/test_data.py",
+      "bytes": 475,
+      "sha256": "2ae01203e1405ba7899adc1efbf7b5efc69aba243970d3f224dabb649ef95e68"
+    },
+    {
+      "path": "tests/test_loader.py",
+      "bytes": 457,
+      "sha256": "fa12b74bb1d94bc3ebde14c8d151bfd64bd4b5d639ef840c87e9fe55b28ef4f9"
+    },
+    {
+      "path": "uv.lock",
+      "bytes": 565764,
+      "sha256": "e253d4e625f2fd00fe756f9e6dcded71282c82fdac5ba9e20a6a7ec7f6d65cad"
+    }
+  ],
+  "totals": {
+    "files": 102,
+    "bytes": 337912423
+  }
+}
